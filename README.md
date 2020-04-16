@@ -17,3 +17,10 @@ yarn build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Stacks
+- ##### Vuex
+- ##### axios
+- ##### Vue BootStrap4
+- ##### scss

@@ -1,0 +1,88 @@
+//전체 세팅
+@mixin all-center {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  -ms-flex-pack: center !important;
+  -webkit-box-pack: center !important;
+  justify-content: center !important;
+  display: -ms-flexbox !important;
+  display: -webkit-box !important;
+  display: flex !important;
+}
+
+@mixin all-center-left {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  -ms-flex-pack: start !important;
+  -webkit-box-pack: start !important;
+  justify-content: flex-start !important;
+  display: -ms-flexbox !important;
+  display: -webkit-box !important;
+  display: flex !important;
+}
+
+@mixin all-center-right {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  -ms-flex-pack: end !important;
+  -webkit-box-pack: end !important;
+  justify-content: flex-end !important;
+  display: -ms-flexbox !important;
+  display: -webkit-box !important;
+  display: flex !important;
+}
+
+@mixin ellipsis($line-cnt, $line-height) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-cnt;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: $line-height;
+  height: $line-height * $line-cnt;
+}
+
+@mixin boxShadowBorder($size, $color) {
+  box-shadow: $size 0 0 0 $color,
+  0 $size 0 0 $color,
+  $size $size 0 0 $color,
+  $size 0 0 0 $color inset,
+  0 $size 0 0 $color inset;
+}
+
+@mixin boxShadowBorderBasic {
+  box-shadow: 1px 0 0 0 #dee2e6,
+  0 1px 0 0 #dee2e6,
+  1px 1px 0 0 #dee2e6,
+  1px 0 0 0 #dee2e6 inset,
+  0 1px 0 0 #dee2e6 inset;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+@mixin textOverDot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin no-gutters {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+//전체 세팅 끝

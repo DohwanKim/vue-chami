@@ -1,0 +1,161 @@
+@import "_color";
+@import "baseSet";
+@import "mixin";
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #{$color-chami-base};
+}
+
+.dg-custom-container {
+  padding: 0 !important;
+  > .row {
+    @include no-gutters;
+  }
+}
+
+.header {
+  border-bottom: 1px solid $color-bs-light;
+
+  .header__gird {
+    padding: 12px 10px;
+
+    .header__gird--left {
+      @include all-center-left;
+
+      > * {
+        cursor: pointer;
+      }
+    }
+
+    .header__gird--right {
+      @include all-center-right;
+
+      > * {
+        cursor: pointer;
+      }
+    }
+
+    .header__logo {
+      width: 50px;
+      margin-right: 5px;
+    }
+
+    .header__login-icon {
+      width: 15px;
+      padding-bottom: 3px;
+      margin-right: 5px;
+    }
+
+    a {
+      font-size: 1.05rem;
+      line-height: 1.3rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-chami-footer-background;
+  padding: 15px 0 !important;
+  font-size: .9rem;
+
+  .footer__top {
+    @include flexRow;
+    @include all-center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+    }
+
+    .footer__top--logo {
+      width: 45px;
+      margin-right: 5px;
+    }
+  }
+
+  .footer__bottom {
+    text-align: center;
+  }
+}
+
+.main {
+  background-color: $color-chami-main-background;
+
+  .main__filter {
+    @include flexRow;
+    padding: 10px 0;
+
+    button {
+      background-color: white;
+      color: $color-chami-base;
+      border: none;
+      border-radius: 2px;
+      width: 100%;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    .main__filter--left, .main__filter--right {
+      width: 100%;
+    }
+
+    .main__filter--right {
+      padding-left: 10px;
+    }
+  }
+
+  .main__menus {
+    @include no-gutters;
+    margin-bottom: 10px;
+    background-color: white;
+    font-weight: 700;
+
+    > div {
+      min-height: 60px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .col {
+      @include all-center;
+      border-left: 1px solid $color-bs-light;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-chami-white-box-clicked;
+
+        p {
+          color: $color-chami-blue;
+        }
+      }
+    }
+
+    .col-4 {
+      @include all-center;
+      flex-direction: column;
+
+      .main__menus--badge {
+        background-color: $color-chami-blue;
+        padding: 3px 8px;
+        color: white;
+      }
+
+      .badge--english {
+        background-color: $color-chami-yellow;
+      }
+
+      .badge--math {
+        background-color: $color-chami-blue;
+      }
+
+      .badge--others {
+        background-color: $color-chami-lite-gray;
+      }
+    }
+  }
+}
