@@ -10,16 +10,16 @@
 
     <section id="id-main-view-section" class="main">
       <b-container class="dg-custom-container">
-        <b-row class="main__filter">
+        <b-row class="main__filter mobile-in-grid-p">
           <b-col>
-            <b-dropdown id="dropdown-left" text="최근년도순" variant="primary" class="main__filter--left">
+            <b-dropdown id="main--dropdown-left" text="최근년도순" variant="primary" class="main__filter--left">
               <b-dropdown-item href="#">최근 년도순</b-dropdown-item>
               <b-dropdown-item href="#">과거 년도순</b-dropdown-item>
             </b-dropdown>
           </b-col>
           <!-- filter subject -->
           <b-col cols="4">
-            <b-dropdown id="dropdown-right" right text="전 과목" variant="primary" class="main__filter--right">
+            <b-dropdown id="main--dropdown-right" right text="전 과목" variant="primary" class="main__filter--right">
               <b-dropdown-item href="#">전 과목</b-dropdown-item>
               <b-dropdown-item href="#">수학</b-dropdown-item>
               <b-dropdown-item href="#">영어</b-dropdown-item>

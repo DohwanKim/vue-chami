@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import mainView from '@/views/mainView.vue';
+import selectProblemView from "@/views/selectProblemView";
+import myPageView from "@/views/myPageView";
 
 Vue.use(VueRouter);
 
@@ -9,6 +11,16 @@ const routes = [
     path: '/',
     name: 'mainView',
     component: mainView
+  },
+  {
+    path: '/selectProblem',
+    name: 'selectProblemView',
+    component: selectProblemView
+  },
+  {
+    path: '/myPage',
+    name: 'myPageView',
+    component: myPageView
   },
 ];
 

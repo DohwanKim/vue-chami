@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="advert__carousel">
     <b-carousel
         id="carousel-1"
         v-model="slide"

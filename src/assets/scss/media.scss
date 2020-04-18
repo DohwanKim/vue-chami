@@ -7,7 +7,8 @@ $grid-breakpoints-xl: 1120px;
 
 
 @media screen and (max-width: $grid-breakpoints-sm){
-  .main__filter {
-    padding: 10px !important;
+  .mobile-in-grid-p {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }

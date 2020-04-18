@@ -1,6 +1,8 @@
 @import "_color";
-@import "baseSet";
-@import "mixin";
+@import "mixins";
+@import "media";
+@import "viewAnimate";
+@import "animate";
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
@@ -11,6 +13,17 @@
   padding: 0 !important;
   > .row {
     @include no-gutters;
+  }
+}
+
+.no-gutters {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -66,6 +79,12 @@
     width: 100%;
     margin-bottom: 20px;
 
+    a {
+      padding: 0 5px;
+      cursor: pointer;
+      font-size: .85rem;
+    }
+
     p {
       margin: 0;
     }
@@ -85,7 +104,6 @@
   background-color: $color-chami-main-background;
 
   .main__filter {
-    @include flexRow;
     padding: 10px 0;
 
     button {
@@ -96,6 +114,7 @@
       width: 100%;
       font-size: .9rem;
       font-weight: 600;
+
     }
 
     .main__filter--left, .main__filter--right {
@@ -155,6 +174,307 @@
 
       .badge--others {
         background-color: $color-chami-lite-gray;
+      }
+    }
+  }
+}
+
+.advert__carousel {
+  .carousel-item {
+    max-height: 450px !important;
+  }
+}
+
+
+.select-problem {
+  background-color: $color-chami-main-background;
+  padding: 7px;
+  min-height: 400px;
+
+  > .container {
+    background-color: white;
+    padding: 10px !important;
+    border-radius: 2px;
+  }
+
+  .select-problem--title {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-bs-light;
+    margin-bottom: 15px;
+
+    h1 {
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+  }
+
+  .select-problem--items {
+    .col-12 {
+      @include all-center;
+      height: 50px;
+      border: 1px solid $color-bs-light;
+      margin-bottom: 10px;
+
+      p {
+        font-weight: 700;
+        margin: 0;
+      }
+      &:hover {
+        background-color: $color-chami-white-box-clicked;
+
+        p {
+          color: $color-chami-blue !important;
+        }
+      }
+    }
+  }
+}
+
+.my-page {
+  min-height: 600px;
+  background-color: $color-chami-main-background;
+
+  .my-page__tabs {
+    background-color: white;
+    border: 1px solid $color-bs-light;
+
+    .col {
+      @include all-center;
+      height: 45px;
+      cursor: pointer;
+
+      p {
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .active {
+      background-color: $color-chami-white-box-clicked;
+      color: $color-chami-blue;
+    }
+  }
+
+  .my-page__filter-area {
+    padding: 10px 0;
+
+    .my-page__filter-area--left {
+      padding-right: 5px;
+    }
+
+    .my-page__filter-area--right {
+      padding-left: 5px;
+    }
+
+    .my-page__filter {
+      @include all-center;
+
+      button {
+        background-color: white;
+        color: $color-chami-base;
+        border: none;
+        border-radius: 2px;
+        width: 100%;
+        font-size: .9rem;
+        font-weight: 600;
+      }
+
+      .show > .btn-primary.dropdown-toggle {
+        color: #fff !important;
+        background-color: #0062cc !important;
+        border-color: #005cbf !important;
+      }
+    }
+  }
+
+  .my-page__items {
+    padding-bottom: 10px;
+    > div {background-color: white;}
+
+    .my-page__items--each {
+      margin-bottom: 10px;
+    }
+
+    .my-page__items--title {
+      @include all-center-left;
+      flex-direction: column;
+      padding: 20px 10px 10px 10px;
+
+      > div {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: .9rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      h6 {
+        font-size: .7rem;
+        margin: 0;
+      }
+    }
+
+    .my-page__items--ranking {
+      font-size: 1.1rem;
+      @include all-center;
+
+    }
+
+    .my-page__items--buttons {
+      @include flexRow;
+      box-sizing: border-box;
+
+      > div {
+        @include all-center;
+        width: 50%;
+        height: 100%;
+      }
+
+      button {
+        @include all-center;
+        width: 97%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background-color: white;
+        font-weight: 600;
+        color: $color-chami-blue;
+        font-size: .9rem;
+
+        //$:hover
+      }
+    }
+
+    .my-page__items--bottom-buttons {
+      height: 45px;
+      font-size: .8rem;
+
+      .col-4 {
+        @include all-center;
+        height: 100%;
+      }
+
+      .my-page__items--icon-1 {
+        width: 20px;
+        margin-right: 4px;
+      }
+      .my-page__items--icon-2 {
+        width: 23px;
+        margin-right: 4px;
+      }
+      .my-page__items--icon-3 {
+        width: 20px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .my-page__my-info {
+    padding: 10px 0;
+    > div {
+      padding: 20px 10px !important;
+      background-color: white;
+    }
+
+    .my-page__my-info--selects {
+      margin-bottom: 30px;
+
+      .col {
+        @include all-center;
+        @include boxShadowBorderBasic;
+        height: 45px;
+        cursor: pointer;
+
+        p {
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+
+      .active {
+        background-color: $color-chami-blue;
+
+        p {
+          color: white;
+        }
+
+      }
+    }
+
+    .my-page__my-info--form {
+
+      > div {
+        margin-bottom: 10px;
+      }
+
+      .my-page__my-info--form--left {
+        @include all-center-right;
+      }
+
+      .my-page__my-info--form--right {
+        @include flexRow;
+        word-break: break-all;
+        word-wrap: break-word;
+        button {
+          padding: 0;
+          background-color: $color-chami-blue;
+          width: 85px;
+          height: 95%;
+          margin-left: 5px;
+          border: none;
+          color: white;
+          font-weight: 700;
+          border-radius: 2px;
+          font-size: .9rem;
+        }
+
+        .input-group {
+          max-width: 580px;
+          input {
+            max-width: 580px;
+          }
+        }
+      }
+
+      .col-12 {
+        margin-top: 50px;
+        button {
+          @include all-center;
+          padding: 0;
+          background-color: $color-chami-blue;
+          width: 100%;
+          height: 50px;
+          margin-left: 5px;
+          border: none;
+          color: white;
+          font-weight: 700;
+          border-radius: 2px;
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .my-page__secession {
+    .col {
+      text-align: right;
+      margin-bottom: 40px;
+
+      button {
+        width: 80px;
+        color: white;
+        border: none;
+        height: 30px;
+        background-color: $color-chami-yellow;
+        font-size: .8rem;
+        font-weight: bold;
       }
     }
   }
