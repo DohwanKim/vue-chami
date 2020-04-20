@@ -42,7 +42,7 @@
                   <!-- badge end -->
                 </b-col>
                 <b-col>
-                  <p>6월</p>
+                  <p >6월</p>
                 </b-col>
                 <b-col>
                   <p>9월</p>
@@ -66,7 +66,7 @@
 <script>
   import baseHeader from "@/components/base/baseHeader.vue";
   import baseFooter from "@/components/base/baseFooter.vue";
-  import advertCarousel from "@/components/advertCarousel.vue"
+  import advertCarousel from "@/components/advertCarousel.vue";
 
   export default {
     name: "mainView",
@@ -103,6 +103,9 @@
         return res;
       },
 
+      movePage(pageURL) {
+        this.$router.push('/');
+      }
     },
   }
 </script>

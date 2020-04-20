@@ -16,3 +16,16 @@
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+
+.more-img-enter-active {
+  transition: opacity 1s;
+}
+
+.more-img-leave-active {
+  transition: opacity .3s;
+}
+
+.more-img-enter, .more-img-leave-to {
+  opacity: 0;
+}

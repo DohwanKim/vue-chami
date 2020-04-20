@@ -16,7 +16,7 @@
           </b-col>
         </b-row>
         <b-row class="select-problem--items" v-for="n in 4" v-bind:key="n.index">
-          <b-col cols="12">
+          <b-col cols="12" @click="movePage('detail')">
             <p>(가형) 1번</p>
           </b-col>
         </b-row>
@@ -32,7 +32,7 @@
 <script>
   import baseHeader from "@/components/base/baseHeader.vue";
   import baseFooter from "@/components/base/baseFooter.vue";
-  import advertCarousel from "@/components/advertCarousel.vue"
+  import advertCarousel from "@/components/advertCarousel.vue";
 
   export default {
     name: "selectProblemView",
@@ -41,6 +41,12 @@
       baseHeader: baseHeader,
       baseFooter: baseFooter,
       advertCarousel: advertCarousel,
+    },
+
+    methods: {
+      movePage(pageURL) {
+        this.$router.push('/');
+      }
     },
   }
 </script>

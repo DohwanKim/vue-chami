@@ -1,8 +1,8 @@
 @import "_color";
 @import "mixins";
 @import "media";
-@import "viewAnimate";
 @import "animate";
+@import "viewAnimate";
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
@@ -41,8 +41,53 @@
       }
     }
 
+    .header__grid--center {
+      @include all-center;
+
+      h1 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+
+    .header__grid--center--detail {
+      @include all-center;
+      text-align: center;
+
+      h1 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
     .header__gird--right {
       @include all-center-right;
+
+      > * {
+        cursor: pointer;
+      }
+    }
+
+    .header__gird--right-vertical {
+      @include all-center-right;
+
+      > div {
+        @include all-center;
+        flex-direction: column;
+      }
+
+      img {
+        width: 20px;
+        //padding: 0;
+        margin-right: 0;
+      }
+
+      a {
+        font-size: .8rem;
+        line-height: 1rem;
+      }
 
       > * {
         cursor: pointer;
@@ -215,6 +260,7 @@
       height: 50px;
       border: 1px solid $color-bs-light;
       margin-bottom: 10px;
+      cursor: pointer;
 
       p {
         font-weight: 700;
@@ -279,12 +325,12 @@
         font-size: .9rem;
         font-weight: 600;
       }
+    }
 
-      .show > .btn-primary.dropdown-toggle {
-        color: #fff !important;
-        background-color: #0062cc !important;
-        border-color: #005cbf !important;
-      }
+    .show > .btn-primary.dropdown-toggle {
+      color: #fff !important;
+      background-color: #0062cc !important;
+      border-color: #005cbf !important;
     }
   }
 
@@ -476,6 +522,257 @@
         font-size: .8rem;
         font-weight: bold;
       }
+    }
+  }
+}
+
+
+.problem-detail {
+  background-color: $color-chami-main-background;
+
+  .problem-detail__post {
+    .problem-detail__post--filter {
+      padding: 10px 0;
+
+      > div {
+        background-color: white;
+      }
+
+      button {
+        background-color: white;
+        color: $color-chami-base;
+        border: none;
+        border-radius: 2px;
+        width: 100%;
+        font-size: .9rem;
+        font-weight: 600;
+      }
+
+      .problem-detail__post--filter-drop-down {
+        width: 100%;
+      }
+
+      .show > .btn-primary.dropdown-toggle {
+        color: #fff !important;
+        background-color: #0062cc !important;
+        border-color: #005cbf !important;
+      }
+    }
+
+    .problem-detail__post--grid {
+      margin-bottom: 15px;
+
+      .problem-detail__post--profile-img {
+        @include all-center-right;
+        padding-right: 10px;
+
+        > img {
+          width: 35px;
+        }
+      }
+
+      .problem-detail__post--tier-img {
+        @include all-center-right;
+        padding-left: 10px;
+
+        > img {
+          width: 25px;
+        }
+      }
+
+      .problem-detail__post--title {
+        .title {
+          padding-top: 2px;
+          font-size: .95rem;
+          font-weight: 600;
+          line-height: 1.2rem;
+        }
+
+        .date {
+          font-weight: 400;
+          font-size: .8rem;
+          line-height: .9rem;
+        }
+      }
+
+      .problem-detail__post--top, .problem-detail__post--contents {
+        background-color: white;
+        padding: 10px 0;
+      }
+
+      .problem-detail__post--contents {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .problem-detail__post--contents--text {
+        margin-bottom: 20px;
+
+        > div {
+          max-width: 100%;
+          margin-bottom: 0;
+          word-wrap: break-word;
+        }
+      }
+
+      .problem-detail__post--contents--img {
+        text-align: center;
+
+        > img {
+          width: 100%;
+          max-width: 700px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .problem-detail__post--contents--more {
+        transition: .5s all;
+
+        button {
+          width: 100%;
+          background-color: $color-chami-blue;
+          color: white;
+          font-weight: bold;
+          height: 42px;
+          border: none;
+          border-radius: 3px;
+        }
+      }
+
+      .problem-detail__post--comments {
+        background-color: white;
+        padding-top: 10px;
+
+        .problem-detail__post--comments--icons {
+          .col {
+            @include all-center;
+            flex-direction: column;
+            padding: 3px 0;
+            cursor: pointer;
+
+            img {
+              height: 30px;
+              padding-bottom: 5px;
+            }
+
+            p {
+              margin: 0;
+              line-height: 1rem;
+              font-size: .9rem;
+            }
+
+            .sub {
+              font-size: .8rem;
+              color: $color-chami-lite-gray;
+            }
+          }
+        }
+
+        .problem-detail__post--comments--forms {
+          padding: 10px;
+
+          textarea {
+            border-radius: 0;
+            font-size: .82rem;
+            background-color: rgb(246, 246, 246);
+            outline: 0 !important;
+            -webkit-appearance:none;
+            box-shadow: none !important;
+          }
+
+          button {
+            padding: 0 10px;
+            height: 100%;
+            background-color: $color-chami-yellow;
+            border: none;
+            border-right: 1px solid $color-bs-light;
+            border-top: 1px solid $color-bs-light;
+            border-bottom: 1px solid $color-bs-light;
+            color: white;
+            font-weight: bold;
+            outline:0px !important;
+            -webkit-appearance:none;
+            box-shadow: none !important;
+          }
+        }
+
+        .problem-detail__post--comments--all {
+          padding: 10px;
+
+          .title {
+            padding-top: 2px;
+            font-size: .95rem;
+            font-weight: 600;
+            line-height: 1.2rem;
+          }
+
+          .date {
+            font-weight: 400;
+            font-size: .8rem;
+            line-height: .9rem;
+          }
+
+          .comment {
+            padding: 10px;
+            background-color: rgb(246, 246, 246);
+            font-size: .85rem;
+            font-weight: 600;
+          }
+
+          button {
+            border: none;
+            font-size: .85rem;
+            padding: 0 2px;
+            margin-left: 10px;
+            color: $color-chami-blue;
+            font-weight: 500;
+            background-color: white;
+            height: 14px;
+          }
+        }
+
+        .problem-detail__post--comments--more {
+          @include all-center;
+          height: 45px;
+          border-top: 1px solid $color-bs-light;
+          cursor: pointer;
+
+          p {
+            color: $color-chami-blue;
+            font-size: .9rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .problem-detail__post--your-post {
+    background-color: white;
+    padding: 10px;
+    font-size: .95rem;
+    font-weight: 500;
+
+    > div {
+      @include all-center;
+    }
+
+    img {
+      width: 35px;
+    }
+
+    button {
+      background-color: $color-chami-yellow;
+      border: none;
+      padding: 3px 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0 3px;
     }
   }
 }

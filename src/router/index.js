@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import mainView from '@/views/mainView.vue';
 import selectProblemView from "@/views/selectProblemView";
+import problemDetailView from "@/views/problemDetailView";
 import myPageView from "@/views/myPageView";
 
 Vue.use(VueRouter);
@@ -21,6 +22,11 @@ const routes = [
     path: '/myPage',
     name: 'myPageView',
     component: myPageView
+  },
+  {
+    path: '/problemDetail',
+    name: 'problemDetailView',
+    component: problemDetailView
   },
 ];
 

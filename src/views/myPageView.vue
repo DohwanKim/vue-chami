@@ -1,7 +1,24 @@
 <template>
   <div id="id-my-page-view">
     <header>
-      <base-header/>
+      <div id="id-title-header" class="header">
+        <b-container class="dg-custom-container">
+          <b-row class="header__gird">
+            <b-col class="header__gird--left">
+              <img src="@/assets/images/banner/logo.png" alt="" class="header__logo">
+            </b-col>
+            <b-col class="header__grid--center">
+              <h1>마이페이지</h1>
+            </b-col>
+            <b-col class="header__gird--right-vertical">
+              <div>
+                <img src="@/assets/icons/imgBaseIcons/home.png" alt="" class="header__login-icon">
+                <a>메인으로</a>
+              </div>
+            </b-col>
+          </b-row>
+        </b-container>
+      </div>
     </header>
 
     <section id="my-page-section" class="my-page">
@@ -140,7 +157,7 @@
 <script>
   import baseHeader from "@/components/base/baseHeader.vue";
   import baseFooter from "@/components/base/baseFooter.vue";
-  import advertCarousel from "@/components/advertCarousel.vue"
+  import advertCarousel from "@/components/advertCarousel.vue";
 
   export default {
     name: "myPageView",
@@ -191,9 +208,11 @@
         } else {
           console.log('wrong tab number');
         }
+      },
 
+      movePage(pageURL) {
+        this.$router.push('/');
       }
-
     }
   }
 </script>
