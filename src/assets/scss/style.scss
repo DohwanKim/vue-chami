@@ -541,16 +541,16 @@
       flex-direction: column;
       position: fixed;
       background-color: $color-chami-yellow;
-      right: 10px;
-      bottom: 30px;
-      height: 70px;
-      width: 70px;
+      right: 40px;
+      bottom: 40px;
+      height: 100px;
+      width: 100px;
       border-radius: 50%;
       cursor: pointer;
 
       img {
         margin-top: -3px;
-        width: 35px;
+        width: 50px;
       }
 
       p {
@@ -559,7 +559,7 @@
         line-height: 1rem;
         color: white;
         font-weight: bold;
-        font-size: .9rem;
+        font-size: 1rem;
       }
     }
   }
@@ -839,6 +839,7 @@
         height: 40px;
         margin-bottom: 5px;
         outline: none;
+        border: 1px solid $color-bs-light;
 
         img {
           height: 18px;

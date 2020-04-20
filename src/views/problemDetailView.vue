@@ -360,7 +360,6 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
                   </b-col>
                 </b-row>
               </b-container>
-
               <b-container class="dg-custom-container posting__file-input">
                 <b-row class="posting__file-input--items">
                   <!-- each items -->
@@ -379,7 +378,6 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
                   <!-- each items end -->
                 </b-row>
               </b-container>
-
               <b-container class="dg-custom-container posting__buttons border-top">
                 <b-row>
                   <b-col class="submit">
