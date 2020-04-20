@@ -94,7 +94,7 @@
         </b-container>
         <b-container class="dg-custom-container" v-else-if="myPageTabStatus === 1" key="tabs2">
           <b-row class="my-page__my-info mobile-in-grid-p">
-            <b-col>
+            <b-col class="shadow">
               <b-row class="no-gutters my-page__my-info--selects" id="id-my-info-select">
                 <b-col class="active" @click="selectIdentityEvent(0)" id="select-0">
                   <p>학생</p>
@@ -114,7 +114,6 @@
                   <b-input-group>
                     <b-form-input/>
                   </b-input-group>
-                  <button>찾기</button>
                 </b-col>
                 <b-col cols="4" sm="3" class="my-page__my-info--form--left">
                   <p>이름/닉네임</p>
@@ -163,7 +162,6 @@
     name: "myPageView",
 
     components: {
-      baseHeader: baseHeader,
       baseFooter: baseFooter,
       advertCarousel: advertCarousel,
     },
@@ -176,8 +174,7 @@
     },
 
     methods: {
-
-      selectClear(id) {
+      selectClearSet(id) {
         let selectButtons = document.querySelector("#id-my-info-select").children;
 
         for(let i = 0; i < selectButtons.length; i++) {
@@ -190,7 +187,7 @@
       // 0 - student, 1 - teacher, 2 - none
       selectIdentityEvent(identityNum) {
         this.selectIdentity = identityNum;
-        this.selectClear(identityNum);
+        this.selectClearSet(identityNum);
       },
 
       tabEvent(tabNum){
@@ -198,12 +195,12 @@
         let tab2 = document.querySelector("#id-my-page-tab-2");
 
         if(tabNum === 0) {
-          tab2.classList.toggle('active');
-          tab1.classList.toggle('active');
+          tab2.classList.remove('active');
+          tab1.classList.add('active');
           this.myPageTabStatus = 0;
         } else if (tabNum === 1){
-          tab1.classList.toggle('active');
-          tab2.classList.toggle('active');
+          tab1.classList.remove('active');
+          tab2.classList.add('active');
           this.myPageTabStatus = 1;
         } else {
           console.log('wrong tab number');

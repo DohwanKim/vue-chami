@@ -11,4 +11,23 @@ $grid-breakpoints-xl: 1120px;
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
+
+  .login__col-grid {
+    margin-bottom: 30vh !important;
+  }
+  .login__row-grid {
+    padding: 30px 10px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 800px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 800px !important;
+  }
 }

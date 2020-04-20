@@ -3,7 +3,7 @@
     <b-container class="dg-custom-container">
       <b-row>
         <b-col>
-          <div class="footer__top">
+          <div class="footer__top" style="margin-bottom: 10px">
             <a>이용약관</a>|<a>개인정보취급방침</a>
           </div>
           <div class="footer__top">
