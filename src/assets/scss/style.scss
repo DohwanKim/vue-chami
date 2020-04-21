@@ -373,6 +373,9 @@
       font-size: 1.1rem;
       @include all-center;
 
+      img {
+        width: 25px;
+      }
     }
 
     .my-page__items--buttons {

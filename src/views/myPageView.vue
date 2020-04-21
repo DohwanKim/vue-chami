@@ -62,7 +62,7 @@
                 </b-col>
                 <b-col cols="4">
                   <div style="height: 55%" class="my-page__items--ranking border-bottom">
-                    100위
+                    <img src="@/assets/icons/imgBaseIcons/comment-gold.png" alt="">
                   </div>
                   <div style="height: 45%" class="my-page__items--buttons border-bottom">
                     <div>
