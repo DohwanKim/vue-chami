@@ -60,16 +60,18 @@
                 </div>
               </b-col>
               <b-col cols="12" class="problem-detail__post--contents--img">
-                <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  <viewer>
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                    <transition name="more-img" tag="img">
+                      <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                    </transition>
+                    <transition name="more-img" tag="img">
+                      <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                    </transition>
+                  </viewer>
               </b-col>
-              <transition name="more-img">
-                <b-col cols="12" class="problem-detail__post--contents--img" v-if="moreImgStatus">
-                  <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                  <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                </b-col>
-              </transition>
               <b-col cols="12" class="problem-detail__post--contents--more">
-                <button @click="moreImgStatus = !moreImgStatus"> {{moreImgBtnMsg}} </button>
+                <button @click="moreImgStatus0 = !moreImgStatus0"> {{moreImgBtnMsg0}} </button>
               </b-col>
             </b-row>
           </div>
@@ -123,16 +125,18 @@
                 </div>
               </b-col>
               <b-col cols="12" class="problem-detail__post--contents--img">
-                <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                <viewer>
+                  <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  <transition name="more-img" tag="img">
+                    <img v-show="moreImgStatus1" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  </transition>
+                  <transition name="more-img" tag="img">
+                    <img v-show="moreImgStatus1" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  </transition>
+                </viewer>
               </b-col>
-              <transition name="more-img">
-                <b-col cols="12" class="problem-detail__post--contents--img" v-if="moreImgStatus">
-                  <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                  <b-img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                </b-col>
-              </transition>
               <b-col cols="12" class="problem-detail__post--contents--more">
-                <button @click="moreImgStatus = !moreImgStatus"> {{moreImgBtnMsg}} </button>
+                <button @click="moreImgStatus1 = !moreImgStatus1">{{moreImgBtnMsg1}}</button>
               </b-col>
             </b-row>
             <b-row class="no-gutters problem-detail__post--comments shadow">
@@ -414,19 +418,28 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
 
     data() {
       return {
-        moreImgStatus: false,
-        moreImgBtnMsg: '풀이 펼쳐보기',
+        moreImgStatus0: false,
+        moreImgStatus1: false,
+        moreImgBtnMsg0: '풀이 펼쳐보기',
+        moreImgBtnMsg1: '풀이 펼쳐보기',
         text: '',
         postingText: '',
       }
     },
 
     watch: {
-      moreImgStatus: function(val) {
+      moreImgStatus0: function(val) {
         if(val) {
-          this.moreImgBtnMsg = '이미지 숨기기';
+          this.moreImgBtnMsg0 = '이미지 숨기기';
         } else {
-          this.moreImgBtnMsg = '풀이 펼쳐보기';
+          this.moreImgBtnMsg0 = '풀이 펼쳐보기';
+        }
+      },
+      moreImgStatus1: function(val) {
+        if(val) {
+          this.moreImgBtnMsg1 = '이미지 숨기기';
+        } else {
+          this.moreImgBtnMsg1 = '풀이 펼쳐보기';
         }
       },
     },
