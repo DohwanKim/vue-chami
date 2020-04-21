@@ -19,25 +19,21 @@ $grid-breakpoints-xl: 1120px;
   }
   .problem-detail--fixed-icon {
     > div {
-      flex-direction: column;
-      position: fixed;
-      right: 10px;
-      bottom: 30px;
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      cursor: pointer;
+      right: 10px !important;
+      bottom: 30px !important;
+      height: 70px !important;
+      width: 70px !important;
 
       img {
-        margin-top: -3px;
-        width: 35px;
+        margin-top: -3px !important;
+        width: 35px !important;
       }
 
       p {
-        margin-top: -3px;
-        margin-bottom: 5px;
-        line-height: 1rem;
-        font-size: .9rem;
+        margin-top: -3px !important;
+        margin-bottom: 5px !important;
+        line-height: 1rem !important;
+        font-size: .9rem !important;
       }
     }
   }

@@ -7,7 +7,7 @@
             <b-col class="header__gird--left">
               <img src="@/assets/images/banner/logo.png" alt="" class="header__logo">
             </b-col>
-            <b-col cols="8" class="header__grid--center--detail">
+            <b-col cols="7" class="header__grid--center--detail">
               <h1>2020년 대비 6월 (가형) 6번sfsdfsfds</h1>
             </b-col>
             <b-col class="header__gird--right-vertical">
@@ -81,15 +81,13 @@
           <b-row class="problem-detail__post--filter mobile-in-grid-p">
             <b-col>
               <b-row class="no-gutters problem-detail__post--your-post shadow">
-                <div>
-                  <img src="@/assets/icons/imgBaseIcons/write-post.png" alt="">
-                </div>
-                <b-col>
-                  여러분의 풀이를 <span>뽐</span> 내보세요.
+                <b-col cols="12" class="mb-2">
+                  <img src="@/assets/icons/imgBaseIcons/write-post.png" alt="" class="book-img">
+                  여러분의 풀이를 <img src="@/assets/images/banner/logo.png" alt="" class="mini-logo"> 내보세요.
                 </b-col>
-                <div>
+                <b-col cols="12">
                   <button v-b-modal.modal-posting>내 풀이 올리기</button>
-                </div>
+                </b-col>
               </b-row>
             </b-col>
           </b-row>
@@ -317,7 +315,7 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
                     <b-form-textarea
                         id="textarea"
                         v-model="postingText"
-                        placeholder="내용을 작성하세요."
+                        :placeholder="'여러분의 풀이를 사진으로 찍어 올려주세요.\n유튜브 링크도 환영합니다.\n 그리고 이곳에 풀이에 대한 간단한 소개를 적어주세요.'"
                         rows="6"
                         max-rows="10"
                         :state="postingText.length < 2000"
@@ -417,7 +415,7 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
     data() {
       return {
         moreImgStatus: false,
-        moreImgBtnMsg: '()개의 이미지 더보기+',
+        moreImgBtnMsg: '풀이 펼쳐보기',
         text: '',
         postingText: '',
       }
@@ -428,7 +426,7 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
         if(val) {
           this.moreImgBtnMsg = '이미지 숨기기';
         } else {
-          this.moreImgBtnMsg = '()개의 이미지 더보기+';
+          this.moreImgBtnMsg = '풀이 펼쳐보기';
         }
       },
     },
