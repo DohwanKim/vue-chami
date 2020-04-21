@@ -60,15 +60,15 @@
                 </div>
               </b-col>
               <b-col cols="12" class="problem-detail__post--contents--img">
-                  <viewer>
-                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                    <transition name="more-img" tag="img">
-                      <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                    </transition>
-                    <transition name="more-img" tag="img">
-                      <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
-                    </transition>
-                  </viewer>
+                <vihttps://github.com/DohwanKim/vue-chamiewer>
+                  <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  <transition name="more-img" tag="img">
+                    <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  </transition>
+                  <transition name="more-img" tag="img">
+                    <img v-show="moreImgStatus0" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  </transition>
+                </viewer>
               </b-col>
               <b-col cols="12" class="problem-detail__post--contents--more">
                 <button @click="moreImgStatus0 = !moreImgStatus0"> {{moreImgBtnMsg0}} </button>
@@ -245,9 +245,15 @@
               <div class="divider"/>
               <b-container class="dg-custom-container posting__top">
                 <b-row class="posting__des">
-                  <b-col>
-                    <span>학교/학원</span>
-                    <span>풀이 고등학교</span>
+                  <b-col cols="6" style="padding-right: 5px">
+                    <label>
+                      <input type="text" placeholder="학교/학원" v-model="inputIdentity">
+                    </label>
+                  </b-col>
+                  <b-col cols="6" style="padding-left: 5px">
+                    <label>
+                      <input type="text" placeholder="풀이고등학교" v-model="inputSchool">
+                    </label>
                   </b-col>
                 </b-row>
                 <b-row class="posting__option-button">
@@ -424,6 +430,8 @@ l117 0 0 -650 0 -650 -1000 0 -1000 0 0 650 0 650 218 0 c119 0 236 5 260 10
         moreImgBtnMsg1: '풀이 펼쳐보기',
         text: '',
         postingText: '',
+        inputSchool: '',
+        inputIdentity: '',
       }
     },
 
